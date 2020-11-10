@@ -30,12 +30,6 @@ jobs:
           path: Library
           key: Library-${{ matrix.targetPlatform }}
           restore-keys: Library-
-      - uses: actions/cache@v1.1.0
-        name: Cache ABs
-        with:
-          path: AssetBundles
-          key: AssetBundles-${{ matrix.targetPlatform }}
-          restore-keys: AssetBundles-
       # Build
       - uses: webbertakken/unity-builder@v2.0-alpha-2
         name: Build game
