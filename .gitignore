@@ -1,0 +1,106 @@
+.gitconfig
+
+# =============== #
+# Unity generated #
+# =============== #
+_WorkingDir
+_WorkingDir.meta
+Temp/
+Library/
+Assets/Gamelogic.meta
+Assets/Gamelogic/
+Assets/JsonDotNet.meta
+Assets/NGUI.meta
+Assets/NGUI/
+Assets/Plugins/DOTween.meta
+Assets/Plugins/DOTween/
+Assets/codeandweb.com.meta
+Assets/Logs/
+
+# Maps
+Assets/StaticAssets/Scenes/BattleMap/**/Lightmap-*
+Assets/StaticAssets/Scenes/BattleMap/**/LightingData.asset
+Assets/StaticAssets/Scenes/BattleMap/**/LightingData.asset.meta
+Assets/StaticAssets/Scenes/**/*Test.*
+Assets/StreamingAssets/**
+Assets/StreamingAssets.meta
+!Assets/StreamingAssets/**/*.bank
+!Assets/StreamingAssets/**/*.bank.meta
+
+# Builds
+Builds/
+Builds.meta
+Assets/DynamicAssets/Resources/BuildVersionData.asset
+Assets/DynamicAssets/Resources/BuildVersionData.asset.meta
+
+# AB
+AssetBundles/
+AssetBundles.meta
+
+# Config
+Assets/DynamicAssets/Resources/GameConfig.asset
+Assets/DynamicAssets/Resources/GameConfig.asset.meta
+
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+ExportedObj/
+obj/
+*.svd
+*.userprefs
+/*.csproj
+*.pidb
+*.suo
+/*.sln
+*.user
+*.unityproj
+*.booproj
+.vs/
+
+# ====== #
+# VSCode #
+# ====== #
+.vscode
+
+# ====== #
+# Rider  #
+# ====== #
+.idea
+JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll
+JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll.meta
+Assets/Plugins/Editor/JetBrains.meta
+Assets/Plugins/Editor.meta
+
+# ======== #
+# Unity VS #
+# ======== #
+Assets/UnityVS
+Assets/UnityVS.meta
+
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Thumbs.db.meta
+
+# =============== #
+# Testing scripts #
+# =============== #
+Assets/Scripts/Tools/TestingScript.cs
+Assets/Scripts/Tools/TestingScript.cs.meta
+
+# ==== #
+# FMOD #
+# ==== #
+fmod.log
+fmod_editor.log
+Assets/FMODStudioCache.asset
+Assets/FMODStudioCache.asset.meta
+
+config.json
