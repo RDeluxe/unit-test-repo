@@ -16,7 +16,7 @@ jobs:
       fail-fast: false
       matrix:
         targetPlatform:
-          - StandaloneWindows64
+          - Android
     steps:
       # Checkout
       - name: Checkout repository
