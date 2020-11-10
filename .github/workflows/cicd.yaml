@@ -37,7 +37,7 @@ jobs:
           key: AssetBundles-${{ matrix.targetPlatform }}
           restore-keys: AssetBundles-
       # Build
-      - uses: webbertakken/unity-builder@v2.0-alpha-1
+      - uses: webbertakken/unity-builder@v2.0-alpha-2
         name: Build game
         id: buildRunner
         with:
