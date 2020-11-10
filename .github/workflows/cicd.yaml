@@ -30,6 +30,9 @@ jobs:
           path: Library
           key: Library-${{ matrix.targetPlatform }}
           restore-keys: Library-
+      # Clean space    
+      - name: Free disk space
+        run: .github/workflows/scripts/free_disk_space.sh
       # Build
       - uses: webbertakken/unity-builder@v2.0-alpha-2
         name: Build game
