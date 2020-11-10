@@ -1,0 +1,46 @@
+name: Build ⚡
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  buildForSomePlatforms:
+    name: Build for ${{ matrix.targetPlatform }} 🔨
+    runs-on: ubuntu-latest
+    env:
+      UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+      UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+      UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
+      UNITY_BUILD_PATH: output
+    strategy:
+      fail-fast: false
+      matrix:
+        targetPlatform:
+          - StandaloneWindows64
+    steps:
+      # Checkout
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          lfs: true
+      # Cache
+      - uses: actions/cache@v1.1.0
+        name: Cache Library
+        with:
+          path: Library
+          key: Library-${{ matrix.targetPlatform }}
+          restore-keys: Library-
+      - uses: actions/cache@v1.1.0
+        name: Cache ABs
+        with:
+          path: AssetBundles
+          key: AssetBundles-${{ matrix.targetPlatform }}
+          restore-keys: AssetBundles-
+      # Build
+      - uses: webbertakken/unity-builder@v2.0-alpha-1
+        name: Build game
+        id: buildRunner
+        with:
+          unityVersion: 2019.4.4f1
+          targetPlatform: ${{ matrix.targetPlatform }}
